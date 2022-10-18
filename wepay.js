@@ -8,8 +8,8 @@ class wepay_api{
 		this.device_id = device_id;
 		this.device_id_md5 = device_id_md5;
 		this.device_id_sha1 = device_id_sha1;
-		axios.defaults.headers.common['x-platform-os'] = 'ios';
-		axios.defaults.headers.common['x-device-name'] = 'BossNzAPI';
+		axios.defaults.headers.common['x-platform-os'] = 'ios'; //can change "android" and "ios"
+		axios.defaults.headers.common['x-device-name'] = 'BossNzAPI'; // can change device name
 		axios.defaults.headers.common['x-sessionid'] = device_id_sha1;
 	}
 	// ===========================================================
@@ -153,7 +153,7 @@ class wepay_api{
 	}
 	async randomnumber(length) {
 		var result           = [];
-		var characters       = '0123456789';
+		var characters       = '1234567890';
 		var charactersLength = characters.length;
 		for ( var i = 0; i < length; i++ ) {
 			result.push(characters.charAt(Math.floor(Math.random() * 
